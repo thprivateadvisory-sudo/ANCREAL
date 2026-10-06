@@ -132,6 +132,14 @@
     });
   });
 
+  /* Accès rapide : ouvre l'onglet partenaire correspondant */
+  document.querySelectorAll(".js-tab").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var tab = document.getElementById(link.getAttribute("data-tab"));
+      if (tab) selectTab(tab);
+    });
+  });
+
   /* Pré-remplissage du profil depuis les boutons partenaires */
   var profileSelect = document.getElementById("f-profile");
   document.querySelectorAll(".js-profile").forEach(function (btn) {

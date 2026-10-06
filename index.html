@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -39,6 +39,16 @@
 <a class="skip-link" href="#main">Aller au contenu</a>
 
 <!-- ============================== EN-TÊTE ============================== -->
+<div class="topbar">
+  <div class="container">
+    <span>Entreprise de l'Économie Sociale et Solidaire — Grand Est</span>
+    <div class="topbar__links">
+      <a href="#partenaires">Espace partenaires</a>
+      <a href="mailto:contact@groupecohesif.com?subject=Presse%20-%20Anc%C3%A9al">Presse</a>
+      <a href="tel:+33651951160">06 51 95 11 60</a>
+    </div>
+  </div>
+</div>
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="#top" class="brand" aria-label="Ancréal — accueil">
@@ -78,8 +88,8 @@
 
   <div class="container">
     <div class="hero__content">
-      <div class="hero__badge reveal"><b>Lancement</b> Entreprise de l'ESS · Grand Est</div>
-      <h1 class="reveal" data-delay="1">Un toit,<br><em>une seconde chance.</em></h1>
+      <div class="hero__badge reveal"><b>Lancement 2026</b> Logement solidaire</div>
+      <h1 class="reveal" data-delay="1">Un toit,<br>une seconde chance.</h1>
       <p class="hero__text reveal" data-delay="2">
         Ancréal transforme des biens délaissés en logements dignes et abordables, pour accompagner
         les personnes en réinsertion vers une autonomie durable — grâce à un modèle économique
@@ -92,31 +102,45 @@
       </div>
     </div>
   </div>
-  <div class="hero__scroll" aria-hidden="true">Défiler</div>
 </section>
 
-<!-- ============================== CHIFFRES ============================== -->
-<section class="figures" aria-label="Le constat en chiffres">
+<!-- ============================== ACCÈS RAPIDE ============================== -->
+<nav class="quick" aria-label="Accès par profil">
   <div class="container">
+    <div class="quick__grid">
+      <a href="#partenaires" class="quick__item js-tab" data-tab="t-entreprises"><span><small>Vous êtes une entreprise</small><strong>Soutenir le projet</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#partenaires" class="quick__item js-tab" data-tab="t-associations"><span><small>Vous êtes une association</small><strong>Loger vos bénéficiaires</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#partenaires" class="quick__item js-tab" data-tab="t-collectivites"><span><small>Vous êtes une collectivité</small><strong>Revitaliser votre territoire</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#partenaires" class="quick__item js-tab" data-tab="t-proprietaires"><span><small>Vous êtes propriétaire</small><strong>Proposer un bien</strong></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================== CHIFFRES ============================== -->
+<section class="figures" aria-labelledby="constat-title">
+  <div class="container">
+    <div class="figures__head reveal">
+      <h2 id="constat-title">Le mal-logement est une urgence nationale. Les logements vides, une ressource inexploitée.</h2>
+    </div>
     <div class="figures__grid">
       <div class="figure reveal">
         <div class="figure__num" data-count="300000">300 000</div>
         <div class="figure__label">personnes sans domicile fixe en France</div>
-        <div class="figure__src">Fondation Abbé Pierre, 2025</div>
+        <div class="figure__src">Source : Fondation Abbé Pierre, 2025</div>
       </div>
       <div class="figure reveal" data-delay="1">
-        <div class="figure__num"><span data-count="30">30</span><small> %</small></div>
+        <div class="figure__num"><span data-count="30">30</span><small>&nbsp;%</small></div>
         <div class="figure__label">des sans-abri ont un emploi, mais pas de logement stable</div>
-        <div class="figure__src">INSEE</div>
+        <div class="figure__src">Source : INSEE</div>
       </div>
       <div class="figure reveal" data-delay="2">
-        <div class="figure__num"><span data-count="2">2</span><small> M</small></div>
+        <div class="figure__num"><span data-count="2">2</span><small>&nbsp;millions</small></div>
         <div class="figure__label">de logements vacants sur le territoire</div>
-        <div class="figure__src">Ministère du Logement</div>
+        <div class="figure__src">Source : Ministère du Logement</div>
       </div>
-      <div class="figure reveal" data-delay="3">
-        <div class="figure__num">1 <small>réponse</small></div>
-        <div class="figure__label">réunir ces besoins dans un même modèle : remettre les logements vides au service de ceux qui en ont besoin</div>
+      <div class="figure figure--accent reveal" data-delay="3">
+        <div class="figure__num">1&nbsp;<small>modèle</small></div>
+        <div class="figure__label">pour remettre les logements vides au service de ceux qui en ont besoin</div>
         <div class="figure__src">Ancréal</div>
       </div>
     </div>
@@ -140,7 +164,7 @@
     </div>
     <div class="reveal" data-delay="1">
       <span class="eyebrow">Notre mission</span>
-      <h2 class="title">Le logement, <em>premier pas</em> vers l'autonomie.</h2>
+      <h2 class="title">Le logement, premier pas vers l'autonomie.</h2>
       <p class="lead">Sans adresse stable, il est presque impossible de garder un emploi, de se soigner ou de se projeter. Ancréal agit sur ce premier maillon.</p>
       <div class="chain" aria-label="Notre logique d'action">
         <span class="chain__item">Logement stable</span><span class="chain__arrow">→</span>
@@ -164,9 +188,9 @@
 <!-- ============================== MODÈLE ============================== -->
 <section class="section section--cream" id="modele">
   <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Le modèle Ancréal</span>
-      <h2 class="title">Un cycle vertueux, <em>opération après opération.</em></h2>
+    <div class="section-head section-head--row reveal">
+      <div><span class="eyebrow">Le modèle Ancréal</span>
+      <h2 class="title">Un cycle vertueux, opération après opération.</h2></div>
       <p class="lead">Chaque opération suit le même processus rigoureux, documenté et reproductible — la condition pour changer d'échelle.</p>
     </div>
 
@@ -222,7 +246,7 @@
   <div class="container op">
     <div class="reveal">
       <span class="eyebrow">L'opération type</span>
-      <h2 class="title">Un bien vacant devient <em>un foyer.</em></h2>
+      <h2 class="title">Un bien vacant devient un foyer.</h2>
       <p class="lead">Une opération Ancréal, c'est un immeuble délaissé transformé en plusieurs logements conventionnés, en moins d'un an de travaux.</p>
       <div class="photo photo--wide" style="margin-top:34px">
         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" alt="Chantier de réhabilitation" loading="lazy">
@@ -244,12 +268,12 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">La force d'un groupe</span>
-      <h2 class="title">Adossé à l'écosystème <em>Groupe Cohesif.</em></h2>
+      <h2 class="title">Adossé à l'écosystème Groupe Cohesif.</h2>
       <p class="lead">Ancréal s'appuie sur un ensemble d'entreprises intégrées qui maîtrisent chaque étape de la réhabilitation. Résultat : des coûts réduits, des délais tenus, une qualité constante.</p>
     </div>
     <div class="eco">
       <article class="eco__card reveal">
-        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" alt="Artisans du bâtiment sur un chantier" loading="lazy">
+        <div class="eco__img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80" alt="Artisans du bâtiment sur un chantier" loading="lazy"></div>
         <div class="eco__body">
           <span class="eco__tag">Main d'œuvre</span>
           <h3>Cohesif BTP</h3>
@@ -257,7 +281,7 @@
         </div>
       </article>
       <article class="eco__card reveal" data-delay="1">
-        <img src="https://images.unsplash.com/photo-1581858799458-dc4d28d1e4bc?auto=format&fit=crop&w=1000&q=80" alt="Matériaux de construction" loading="lazy">
+        <div class="eco__img"><img src="https://images.unsplash.com/photo-1581858799458-dc4d28d1e4bc?auto=format&fit=crop&w=1000&q=80" alt="Matériaux de construction" loading="lazy"></div>
         <div class="eco__body">
           <span class="eco__tag">Matériaux</span>
           <h3>Cohesif Commerce</h3>
@@ -265,7 +289,7 @@
         </div>
       </article>
       <article class="eco__card reveal" data-delay="2">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Mobilier d'un logement" loading="lazy">
+        <div class="eco__img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=80" alt="Mobilier d'un logement" loading="lazy"></div>
         <div class="eco__body">
           <span class="eco__tag">Ameublement</span>
           <h3>Revalorys</h3>
@@ -279,9 +303,9 @@
 <!-- ============================== ENGAGEMENTS ESS ============================== -->
 <section class="section section--cream" id="engagements">
   <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Nos engagements</span>
-      <h2 class="title">L'Économie Sociale et Solidaire, <em>inscrite dans nos statuts.</em></h2>
+    <div class="section-head section-head--row reveal">
+      <div><span class="eyebrow">Nos engagements</span>
+      <h2 class="title">L'Économie Sociale et Solidaire, inscrite dans nos statuts.</h2></div>
       <p class="lead">Ancréal est constituée dès l'origine selon les exigences de la loi n°2014-856 du 31 juillet 2014 relative à l'ESS. Nos engagements ne sont pas des promesses : ce sont des clauses statutaires.</p>
     </div>
 
@@ -347,7 +371,7 @@
   <div class="container">
     <div class="reveal">
       <span class="eyebrow">Notre ambition</span>
-      <h2 class="title">Devenir la référence du <em>logement solidaire</em> en France.</h2>
+      <h2 class="title">Devenir la référence du logement solidaire en France.</h2>
       <p class="lead">Partir du Grand Est, prouver le modèle opération après opération, puis le déployer à l'échelle nationale — au rythme réel de nos financements.</p>
     </div>
     <div class="kpis">
@@ -365,7 +389,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow">Feuille de route</span>
-      <h2 class="title">Un lancement <em>structuré, étape par étape.</em></h2>
+      <h2 class="title">Un lancement structuré, étape par étape.</h2>
     </div>
     <div class="timeline">
       <div class="tl is-current reveal"><span class="tl__when">Mois 1</span><h4>Création & opération 1</h4><p>Immatriculation de la société ESS et lancement de la première opération (mécénat + prêt bancaire).</p></div>
@@ -380,9 +404,9 @@
 <!-- ============================== PARTENAIRES ============================== -->
 <section class="section" id="partenaires">
   <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Nous rejoindre</span>
-      <h2 class="title">Construisons-le <em>ensemble.</em></h2>
+    <div class="section-head section-head--row reveal">
+      <div><span class="eyebrow">Nous rejoindre</span>
+      <h2 class="title">Construisons-le ensemble.</h2></div>
       <p class="lead">Ancréal réunit acteurs économiques, associatifs et publics autour d'un objectif commun. Trouvez votre place dans le projet.</p>
     </div>
 
@@ -499,9 +523,12 @@
 <!-- ============================== FAQ ============================== -->
 <section class="section" id="faq">
   <div class="container">
-    <div class="section-head center reveal">
+    <div class="faq-wrap">
+    <div class="reveal">
       <span class="eyebrow">Questions fréquentes</span>
-      <h2 class="title">Tout comprendre <em>sur Ancréal.</em></h2>
+      <h2 class="title">Tout comprendre sur Ancréal.</h2>
+      <p class="lead">Une question qui n'est pas listée ? Écrivez-nous, nous répondons sous 48 heures ouvrées.</p>
+      <a href="#contact" class="btn btn--outline">Nous contacter</a>
     </div>
     <div class="faq reveal">
       <details>
@@ -530,6 +557,7 @@
       </details>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- ============================== CONTACT ============================== -->
@@ -537,7 +565,7 @@
   <div class="container contact">
     <div class="reveal">
       <span class="eyebrow">Contact</span>
-      <h2 class="title">Parlons de <em>votre engagement.</em></h2>
+      <h2 class="title">Parlons de votre engagement.</h2>
       <p class="lead">Entreprise, association, collectivité, propriétaire ou financeur : notre équipe vous répond sous 48 heures ouvrées.</p>
       <div class="contact__info">
         <div class="contact__line">
