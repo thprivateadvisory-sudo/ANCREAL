@@ -1,0 +1,171 @@
+<!doctype html>
+<!-- Source de la plaquette PDF. Régénérer avec : python3 tools/make_pdf.py -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Ancréal — Plaquette partenaires</title>
+<style>
+@font-face { font-family: "Archivo"; font-weight: 600; src: url("../assets/fonts/archivo-latin-600-normal.woff2"); }
+@font-face { font-family: "Archivo"; font-weight: 700; src: url("../assets/fonts/archivo-latin-700-normal.woff2"); }
+@font-face { font-family: "Archivo"; font-weight: 800; src: url("../assets/fonts/archivo-latin-800-normal.woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 400; src: url("../assets/fonts/public-sans-latin-400-normal.woff2"); }
+@font-face { font-family: "Public Sans"; font-weight: 600; src: url("../assets/fonts/public-sans-latin-600-normal.woff2"); }
+@font-face { font-family: "Montserrat"; font-weight: 500; src: url("../assets/fonts/montserrat-latin-500-normal.woff2"); }
+@page { size: A4; margin: 0; }
+:root { --brand: #1b3a5b; --gres: #a8432d; --ink: #15191e; --text: #3b424a; --muted: #6a727b; --line: #e2dfd9; --stone: #f2efe9; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Public Sans", sans-serif; font-size: 10.5pt; line-height: 1.55; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 22mm 20mm; }
+.page:last-child { page-break-after: auto; }
+h1, h2, h3, h4 { font-family: "Archivo", sans-serif; color: var(--ink); margin: 0 0 4mm; letter-spacing: -.02em; line-height: 1.08; }
+h2 { font-size: 26pt; font-weight: 800; }
+h3 { font-size: 13pt; font-weight: 700; }
+p { margin: 0 0 3mm; }
+.eyebrow { font-family: "Archivo"; font-weight: 700; font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: var(--gres); margin-bottom: 4mm; display: block; }
+.brand { display: flex; align-items: center; gap: 4mm; font-family: "Montserrat"; font-weight: 500; letter-spacing: .32em; font-size: 15pt; }
+.brand i { width: 13mm; height: 12mm; background: url("../assets/img/logo-mark-white.svg") center/contain no-repeat; }
+.foot { position: absolute; left: 20mm; right: 20mm; bottom: 12mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); border-top: 1px solid var(--line); padding-top: 3mm; }
+
+/* Couverture */
+.cover { background: var(--brand); color: #fff; }
+.cover .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 6mm; background: var(--gres); }
+.cover .mark { position: absolute; right: -30mm; bottom: -30mm; width: 170mm; height: 155mm; background: url("../assets/img/logo-mark-white.svg") center/contain no-repeat; opacity: .08; }
+.cover h1 { color: #fff; font-size: 48pt; font-weight: 800; line-height: .98; letter-spacing: -.035em; margin-top: 70mm; }
+.cover .sub { font-size: 14pt; color: #c5d1de; max-width: 130mm; margin-top: 8mm; }
+.cover .tag { position: absolute; left: 20mm; bottom: 22mm; font-family: "Archivo"; font-weight: 600; font-size: 10pt; color: #c5d1de; }
+.cover .tag b { background: var(--gres); color: #fff; padding: 1.5mm 3mm; margin-right: 3mm; letter-spacing: .1em; font-size: 8pt; }
+
+.figs { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--ink); margin: 6mm 0 10mm; }
+.fig { padding: 5mm 4mm 0 0; }
+.fig + .fig { padding-left: 4mm; border-left: 1px solid var(--line); }
+.fig strong { display: block; font-family: "Archivo"; font-weight: 800; font-size: 26pt; color: var(--ink); letter-spacing: -.03em; line-height: 1; margin-bottom: 2mm; }
+.fig span { font-size: 9pt; }
+.fig small { display: block; color: var(--muted); font-size: 7pt; margin-top: 1.5mm; }
+
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.step { padding: 5mm; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.step b { font-family: "Archivo"; color: var(--gres); font-size: 8.5pt; display: block; margin-bottom: 2mm; }
+.step h4 { font-size: 11.5pt; margin-bottom: 1.5mm; }
+.step p { font-size: 9pt; margin: 0; }
+
+.band { background: var(--brand); color: #d0dae5; padding: 7mm 8mm; margin-top: 8mm; }
+.band strong { color: #fff; }
+
+.pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 2px solid var(--ink); }
+.pillar { padding: 5mm 5mm 5mm 0; border-bottom: 1px solid var(--line); }
+.pillar:nth-child(even) { padding-left: 5mm; border-left: 1px solid var(--line); }
+.pillar h4 { font-size: 11.5pt; margin-bottom: 1.5mm; }
+.pillar p { font-size: 9pt; margin: 0; }
+.pillar small { display: block; color: var(--muted); font-size: 7pt; margin-top: 1.5mm; }
+
+.labels { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); margin-top: 8mm; }
+.label { padding: 5mm; }
+.label + .label { border-left: 1px solid var(--line); }
+.label em { font-style: normal; font-family: "Archivo"; font-weight: 700; font-size: 7pt; letter-spacing: .1em; text-transform: uppercase; padding: 1mm 2mm; display: inline-block; margin-bottom: 2.5mm; }
+.now { background: #e2efe8; color: #2e6e4f; } .next { background: #f5e9e4; color: #8c3523; } .later { background: #e5ebf1; color: var(--brand); }
+.label h4 { font-size: 11pt; margin-bottom: 1mm; }
+.label p { font-size: 8.5pt; margin: 0; color: var(--muted); }
+
+.circle { background: var(--gres); color: #fff; padding: 10mm; margin-top: 8mm; }
+.circle h3 { color: #fff; font-size: 20pt; font-weight: 800; }
+.circle ul { margin: 3mm 0 0; padding-left: 5mm; }
+.seats { display: flex; gap: 2mm; margin-top: 5mm; }
+.seats span { width: 9mm; height: 9mm; border: 1px solid rgba(255,255,255,.6); display: grid; place-items: center; font-family: "Archivo"; font-weight: 700; font-size: 8pt; }
+
+.contact { background: var(--ink); color: #c4cad1; }
+.contact h2 { color: #fff; font-size: 40pt; line-height: 1; margin-top: 55mm; }
+.contact .lines { margin-top: 14mm; border-top: 1px solid rgba(255,255,255,.2); }
+.contact .line { padding: 5mm 0; border-bottom: 1px solid rgba(255,255,255,.2); display: flex; justify-content: space-between; }
+.contact .line b { color: #fff; font-family: "Archivo"; font-weight: 600; font-size: 13pt; }
+.contact .legal { position: absolute; left: 20mm; right: 20mm; bottom: 16mm; font-size: 7.5pt; color: #8a929b; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="bar"></div><div class="mark"></div>
+  <div class="brand"><i></i>ANCRÉAL</div>
+  <h1>Un toit,<br>une seconde chance.</h1>
+  <p class="sub">Le logement solidaire, porté par un modèle économique durable. Présentation à l'attention de nos futurs partenaires.</p>
+  <div class="tag"><b>ESS</b>Logement solidaire — Grand Est — Lancement 2026</div>
+</section>
+
+<section class="page">
+  <span class="eyebrow">Le constat</span>
+  <h2>Des logements vides.<br>Des personnes sans toit.</h2>
+  <div class="figs">
+    <div class="fig"><strong>300 000</strong><span>personnes sans domicile fixe en France</span><small>Fondation Abbé Pierre, 2025</small></div>
+    <div class="fig"><strong>30 %</strong><span>des sans-abri ont un emploi, mais pas de logement stable</span><small>INSEE</small></div>
+    <div class="fig"><strong>2 M</strong><span>de logements vacants sur le territoire</span><small>Ministère du Logement</small></div>
+  </div>
+  <span class="eyebrow">Notre réponse</span>
+  <h3 style="font-size:16pt;margin-bottom:5mm">Acheter, rénover, loger, réinvestir.</h3>
+  <div class="steps">
+    <div class="step"><b>01</b><h4>Identification</h4><p>Biens décotés ou vacants à fort potentiel, au cœur des territoires.</p></div>
+    <div class="step"><b>02</b><h4>Acquisition</h4><p>Apport de mécènes et partenaires, complété par un prêt bancaire.</p></div>
+    <div class="step"><b>03</b><h4>Réhabilitation</h4><p>Travaux par l'écosystème Groupe Cohesif : coûts maîtrisés.</p></div>
+    <div class="step"><b>04</b><h4>Conventionnement</h4><p>Anah ou dispositif équivalent : loyers plafonnés.</p></div>
+    <div class="step"><b>05</b><h4>Location accompagnée</h4><p>Bénéficiaires orientés et suivis par des associations partenaires.</p></div>
+    <div class="step"><b>06</b><h4>Réinvestissement</h4><p>L'excédent et, à terme, la cession financent de nouvelles opérations.</p></div>
+  </div>
+  <div class="band"><strong>Les loyers remboursent le crédit, l'excédent finance l'opération suivante.</strong> Une opération type : environ 100 000 € (achat et travaux), 2 à 3 logements conventionnés, environ 8 mois de travaux. Valeurs indicatives issues de notre modèle prévisionnel.</div>
+  <div class="foot"><span>Ancréal — Plaquette partenaires</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <span class="eyebrow">Nos engagements</span>
+  <h2>L'ESS inscrite<br>dans nos statuts.</h2>
+  <p style="max-width:150mm;margin-bottom:7mm">Ancréal est constituée selon la loi n°2014-856 du 31 juillet 2014 relative à l'Économie Sociale et Solidaire. Nos engagements sont des clauses statutaires.</p>
+  <div class="pillars">
+    <div class="pillar"><h4>Utilité sociale prioritaire</h4><p>Accès au logement des personnes fragilisées ; aucune activité d'achat-revente sans finalité sociale.</p><small>Statuts, art. 3</small></div>
+    <div class="pillar"><h4>Bénéfices réinvestis</h4><p>Au moins 50 % des bénéfices consacrés au développement, dont 20 % à un fonds de développement.</p><small>Statuts, art. 19</small></div>
+    <div class="pillar"><h4>Réserves impartageables</h4><p>Jamais distribuées ; dévolues à d'autres entreprises de l'ESS en cas de dissolution.</p><small>Statuts, art. 19 et 20</small></div>
+    <div class="pillar"><h4>Gouvernance participative</h4><p>Comité consultatif annuel des parties prenantes : bénéficiaires, associations, collectivités.</p><small>Statuts, art. 15 bis</small></div>
+    <div class="pillar"><h4>Rémunérations encadrées</h4><p>Dans le respect des plafonds de l'agrément ESUS, calculés sur la base du SMIC.</p><small>Statuts, art. 13</small></div>
+    <div class="pillar"><h4>Transparence</h4><p>Comptes, rapport d'activité et indicateurs d'impact partagés chaque année.</p><small>Statuts, art. 18</small></div>
+  </div>
+  <div class="labels">
+    <div class="label"><em class="now">Dès la création</em><h4>Entreprise de l'ESS</h4><p>Statuts conformes à la loi ESS.</p></div>
+    <div class="label"><em class="next">Étape suivante</em><h4>Agrément ESUS</h4><p>Dès une première activité démontrée.</p></div>
+    <div class="label"><em class="later">Moyen terme</em><h4>Agrément MOI</h4><p>Après les premières opérations livrées.</p></div>
+  </div>
+  <div class="foot"><span>Ancréal — Plaquette partenaires</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <span class="eyebrow">Nous rejoindre</span>
+  <h2>Une place pour chaque<br>acteur qui veut agir.</h2>
+  <div class="pillars" style="margin-top:6mm">
+    <div class="pillar"><h4>Entreprises & mécènes</h4><p>Un impact concret et local, une réponse aux tensions de recrutement, un reporting valorisable en RSE / CSRD.</p></div>
+    <div class="pillar"><h4>Associations</h4><p>Des logements rénovés, meublés et conventionnés pour vos bénéficiaires ; vous gardez la main sur l'accompagnement.</p></div>
+    <div class="pillar"><h4>Collectivités</h4><p>Remise sur le marché de logements vacants, revitalisation des centres-bourgs, chantiers locaux.</p></div>
+    <div class="pillar"><h4>Propriétaires & financeurs</h4><p>Un bien vacant qui retrouve une utilité ; un modèle adossé à de l'immobilier dont les loyers couvrent le crédit.</p></div>
+  </div>
+  <div class="circle">
+    <h3>Le cercle des 10 entreprises fondatrices</h3>
+    <p>Dix entreprises financent l'apport de l'opération n°1 (part indicative : 3 000 € chacune) et deviennent membres fondateurs d'Ancréal.</p>
+    <ul>
+      <li>Mention permanente comme membre fondateur (avec votre accord)</li>
+      <li>Visite de l'opération et inauguration</li>
+      <li>Reporting d'impact annuel, invitation au comité des parties prenantes</li>
+    </ul>
+    <div class="seats"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+  </div>
+  <div class="foot"><span>Ancréal — Plaquette partenaires</span><span>4</span></div>
+</section>
+
+<section class="page contact">
+  <div class="brand"><i></i>ANCRÉAL</div>
+  <h2>Construisons-le<br>ensemble.</h2>
+  <p style="font-size:13pt;max-width:140mm">Réponse sous 48 heures ouvrées. Dossier complet (statuts, business plan, prévisionnel) transmis sur demande.</p>
+  <div class="lines">
+    <div class="line"><span>Fondateur & Président</span><b>Thomas Hoenig</b></div>
+    <div class="line"><span>E-mail</span><b>contact@groupecohesif.com</b></div>
+    <div class="line"><span>Téléphone</span><b>06 51 95 11 60</b></div>
+    <div class="line"><span>Zone de lancement</span><b>Grand Est — France</b></div>
+  </div>
+  <p class="legal">Ancréal — SAS de l'Économie Sociale et Solidaire, en cours de constitution. Membre de l'écosystème Groupe Cohesif. Document de présentation non contractuel ; les valeurs chiffrées sont indicatives et issues du modèle prévisionnel. Ce document ne constitue pas une offre au public de titres financiers.</p>
+</section>
+
+</body>
+</html>
