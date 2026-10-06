@@ -1,0 +1,18 @@
+{
+  "_info": { "src": "Banque d'images : Unsplash (licence Unsplash, usage commercial libre). Remplacer chaque src par un fichier local assets/img/photos/*.webp une fois les visuels sélectionnés." },
+  "hero-1": { "src": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=80", "alt": "Maison rénovée" },
+  "hero-2": { "src": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2200&q=80", "alt": "Plans d'architecte" },
+  "hero-3": { "src": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=2200&q=80", "alt": "Séjour lumineux" },
+  "keys": { "src": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=80", "alt": "Clés d'un logement" },
+  "interior": { "src": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1400&q=80", "alt": "Intérieur chaleureux" },
+  "worksite": { "src": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80", "alt": "Chantier de réhabilitation" },
+  "crew": { "src": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=80", "alt": "Équipe sur un chantier" },
+  "materials": { "src": "https://images.unsplash.com/photo-1581858799458-dc4d28d1e4bc?auto=format&fit=crop&w=1400&q=80", "alt": "Matériaux de construction" },
+  "furniture": { "src": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1400&q=80", "alt": "Mobilier d'un logement" },
+  "city": { "src": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=80", "alt": "Bâtiments en ville" },
+  "handshake": { "src": "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80", "alt": "Poignée de main entre partenaires" },
+  "volunteers": { "src": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1400&q=80", "alt": "Travailleurs sociaux" },
+  "street": { "src": "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1400&q=80", "alt": "Rue de centre-bourg" },
+  "house": { "src": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=80", "alt": "Maison à rénover" },
+  "meeting": { "src": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=80", "alt": "Réunion de travail" }
+}
