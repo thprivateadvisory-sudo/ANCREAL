@@ -2,6 +2,10 @@
 
 Objectif : site en ligne la semaine prochaine, et montage de la première opération lancé pour acquérir, rénover et louer la première maison.
 
+## 0. Le modèle, en une phrase
+
+Ancréal est une **société immobilière de l'ESS** : je repère une maison, je négocie le prix avec le vendeur ou l'agent immobilier, je l'achète (apport d'investisseurs ou de partenaires, mécénat si possible, crédit bancaire pour le reste), Cohesif BTP la rénove, puis je la loue sous convention avec des bailleurs sociaux ou des associations. Les loyers remboursent le crédit et dégagent un bénéfice, majoritairement réinvesti dans la maison suivante. **Ce n'est pas une collecte de dons.**
+
 ## 1. Pourquoi le mécénat seul ne suffit pas (et ce qui change)
 
 Ancréal est une **SAS de l'ESS**, pas une association d'intérêt général. En règle générale, une SAS ne peut donc pas délivrer de **reçu fiscal de mécénat** (réduction d'impôt de 60 %). C'est très probablement l'une des causes des refus reçus jusqu'ici : sans avantage fiscal, un « don » à une société commerciale est difficile à justifier pour une entreprise. **À valider avec l'expert-comptable.**
@@ -31,6 +35,8 @@ Si la société n'est pas encore immatriculée la semaine prochaine, on peut qua
 ## 3. Montage de la première opération (en parallèle)
 
 **Semaine 1 (du 9 au 13 novembre)**
+- Appeler **5 agences immobilières** du secteur ciblé avec le site et la plaquette : « Ancréal achète des maisons à rénover, avec un financement prêt ». Visiter les 2 ou 3 meilleures pistes.
+- Prendre contact avec **1 ou 2 bailleurs sociaux** du département (convention de location ou de gestion), plus une association de réinsertion.
 - Rendez-vous **France Active** (territoire Grand Est) : garantie bancaire, prêt participatif ESS, accompagnement ESUS.
 - Rendez-vous avec **2 banques** ayant une offre ESS (Crédit Coopératif, Crédit Mutuel, Banque Populaire, Caisse d'Épargne…) avec le business plan et une opération type chiffrée.
 - Contacter le réseau **Initiative** ou **Réseau Entreprendre** pour un prêt d'honneur au fondateur : c'est du quasi-fonds propres, qui renforce le dossier bancaire.
