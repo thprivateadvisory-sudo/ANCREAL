@@ -29,7 +29,10 @@ SRC = ROOT / "src"
 
 # URL publique du site, utilisée pour les liens canoniques, Open Graph et le sitemap.
 # À adapter au nom de domaine réellement réservé.
-SITE_URL = "https://www.ancreal.fr"
+# Adresse publique du site.
+# Aujourd'hui : GitHub Pages. Le jour où ancreal.fr est branché, remplacer par
+# "https://www.ancreal.fr", créer le fichier CNAME (voir README) puis régénérer.
+SITE_URL = "https://thprivateadvisory-sudo.github.io/ANCREAL"
 
 NAV = [
     ("modele", "modele.html", "Notre modèle"),

@@ -27,7 +27,7 @@ tools/build.py        génération des pages + sitemap.xml + robots.txt
 python3 tools/build.py
 ```
 
-**Nom de domaine** : renseigner `SITE_URL` dans `tools/build.py` (actuellement `https://www.ancreal.fr`), puis régénérer.
+**Adresse du site** : `SITE_URL` dans `tools/build.py` vaut actuellement `https://thprivateadvisory-sudo.github.io/ANCREAL` (GitHub Pages).
 
 ## Aperçu local
 ```
@@ -55,5 +55,12 @@ Le formulaire de contact et l'inscription aux nouvelles ouvrent par défaut la m
 - SEO : balises canoniques, Open Graph, données structurées, `sitemap.xml`, `robots.txt`, manifeste.
 - Accessibilité : navigation clavier, `prefers-reduced-motion` respecté, contenu lisible sans JavaScript.
 
-## Mise en ligne
-Hébergement statique : GitHub Pages, Netlify, Vercel ou OVH (déposer le contenu du dépôt hors `src/` et `tools/`).
+## Mise en ligne (GitHub Pages)
+Settings → Pages → *Deploy from a branch* → `main`, dossier `/ (root)`. Chaque push sur `main` est publié en 1 à 2 minutes.
+
+### Passage au domaine ancreal.fr
+1. Chez le registrar, zone DNS :
+   - `www` → enregistrement **CNAME** vers `thprivateadvisory-sudo.github.io.`
+   - `@` (domaine nu) → 4 enregistrements **A** : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+2. Dans le dépôt : créer un fichier `CNAME` contenant `www.ancreal.fr`, et mettre `SITE_URL = "https://www.ancreal.fr"` dans `tools/build.py`, puis `python3 tools/build.py`.
+3. Settings → Pages : vérifier le domaine, puis cocher **Enforce HTTPS** (une fois le certificat émis, jusqu'à 24 h).
