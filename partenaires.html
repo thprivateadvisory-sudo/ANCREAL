@@ -114,26 +114,26 @@
         <span class="eyebrow" data-anim="fade">Cercle des fondateurs</span>
         <h2 class="title" data-anim="lines">Dix fondateurs pour l'apport de l'opération n°1.</h2>
       </div>
-      <p class="lead" data-anim="fade">Le crédit bancaire finance l'essentiel de l'achat et des travaux. Les premiers investisseurs et entreprises engagés apportent les 30 % d'apport — par un investissement, un prêt ou un soutien — et deviennent membres fondateurs d'Ancréal.</p>
+      <p class="lead" data-anim="fade">Le crédit bancaire finance l'essentiel de l'achat et des travaux. Les premiers investisseurs et entreprises engagés apportent les 30 % d'apport, soit environ 40 000 €, — par un investissement, un prêt ou un soutien — et deviennent membres fondateurs d'Ancréal.</p>
     </div>
 
     <div class="sim" data-anim="fade">
       <div class="sim__controls">
         <label for="simRange" style="font-family:var(--font-head);font-weight:700;color:var(--ink)">Simulez votre contribution</label>
-        <div class="sim__amount"><span class="js-sim-amount">3 000</span> €</div>
-        <input type="range" id="simRange" min="1000" max="30000" step="500" value="3000" aria-describedby="simNote">
-        <div class="sim__scale"><span>1 000 €</span><span>30 000 €</span></div>
+        <div class="sim__amount"><span class="js-sim-amount">4 000</span> €</div>
+        <input type="range" id="simRange" min="1000" max="40000" step="500" value="4000" aria-describedby="simNote">
+        <div class="sim__scale"><span>1 000 €</span><span>40 000 €</span></div>
         <div class="sim__presets" role="group" aria-label="Montants suggérés">
-          <button type="button" data-value="1500">1 500 €</button>
-          <button type="button" data-value="3000" class="is-active">3 000 € · part fondatrice</button>
-          <button type="button" data-value="6000">6 000 €</button>
-          <button type="button" data-value="15000">15 000 €</button>
+          <button type="button" data-value="2000">2 000 €</button>
+          <button type="button" data-value="4000" class="is-active">4 000 € · part fondatrice</button>
+          <button type="button" data-value="8000">8 000 €</button>
+          <button type="button" data-value="20000">20 000 €</button>
         </div>
       </div>
       <div class="sim__results" aria-live="polite">
         <div class="sim__res">
           <strong><span class="js-sim-share">10</span> %</strong>
-          <span>de l'apport de l'opération n°1 (30 000 €)</span>
+          <span>de l'apport de l'opération n°1 (40 000 €)</span>
           <div class="sim__bar"><i class="js-sim-bar"></i></div>
         </div>
         <div class="sim__res">
@@ -144,7 +144,7 @@
           <strong><span class="js-sim-seats">1</span> <span class="js-sim-seats-label">place</span></strong>
           <span>au cercle des entreprises fondatrices</span>
         </div>
-        <p class="sim__note" id="simNote">Simulation indicative fondée sur l'opération type de notre modèle prévisionnel (100 000 € dont 30 000 € d'apport). Les conditions définitives (investissement, prêt, soutien ou apport en nature, contreparties) sont précisées dans la convention de partenariat.</p>
+        <p class="sim__note" id="simNote">Simulation indicative fondée sur l'opération type de notre modèle prévisionnel (maison de village de deux logements, environ 125 000 € dont 40 000 € d'apport). Les conditions définitives (investissement, prêt, soutien ou apport en nature, contreparties) sont précisées dans la convention de partenariat.</p>
       </div>
     </div>
 
@@ -290,7 +290,7 @@
         <p style="margin:0">Premières opérations, partenaires, agréments : recevez nos nouvelles, une fois par trimestre.</p>
       </div>
       <div>
-        <form class="js-newsletter" novalidate>
+        <form class="js-newsletter" novalidate data-endpoint="https://api.web3forms.com/submit"><input type="hidden" name="access_key" value="264f0919-dc05-41b5-aeb6-cbdd337fcb32"><input type="hidden" name="from_name" value="Site Ancréal"><input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="subject" value="Ancréal : inscription aux nouvelles">
           <label class="sr-only" for="nl-email">Votre adresse e-mail</label>
           <input id="nl-email" type="email" name="email" placeholder="Votre adresse e-mail" required autocomplete="email">
           <button type="submit" class="btn btn--gold">S'inscrire</button>
