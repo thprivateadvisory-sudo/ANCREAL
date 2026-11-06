@@ -28,11 +28,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "src"
 
 # URL publique du site, utilisée pour les liens canoniques, Open Graph et le sitemap.
-# À adapter au nom de domaine réellement réservé.
-# Adresse publique du site.
-# Aujourd'hui : GitHub Pages. Le jour où ancreal.fr est branché, remplacer par
-# "https://www.ancreal.fr", créer le fichier CNAME (voir README) puis régénérer.
-SITE_URL = "https://thprivateadvisory-sudo.github.io/ANCREAL"
+# Domaine personnalisé servi par GitHub Pages (voir le fichier CNAME et le README).
+SITE_URL = "https://www.ancreal.fr"
 
 NAV = [
     ("modele", "modele.html", "Notre modèle"),

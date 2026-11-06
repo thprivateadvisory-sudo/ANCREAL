@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thprivateadvisory-sudo.github.io/ANCREAL/sitemap.xml
+Sitemap: https://www.ancreal.fr/sitemap.xml
