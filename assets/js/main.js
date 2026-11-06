@@ -1,4 +1,4 @@
-/* ANCRÉAL — interactions et animations du site */
+/* ANCRÉAL : interactions et animations du site */
 (function () {
   "use strict";
 
@@ -130,7 +130,7 @@
       $(".js-sim-share").textContent = share.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
       $(".js-sim-bar").style.width = share + "%";
       $(".js-sim-leverage").textContent = format(Math.round(v * COUT_OPERATION / APPORT / 100) * 100);
-      $(".js-sim-seats").textContent = v >= PART ? seats : "—";
+      $(".js-sim-seats").textContent = v >= PART ? seats : "1";
       $(".js-sim-seats-label").textContent = v >= PART ? (seats > 1 ? "places" : "place") : "contributeur associé";
       presets.forEach(function (b) { b.classList.toggle("is-active", parseInt(b.dataset.value, 10) === v); });
     };
@@ -178,12 +178,12 @@
         return;
       }
       var label = profile.options[profile.selectedIndex].text;
-      var subject = "[Ancréal] " + label + " — " + data.get("name");
+      var subject = "[Ancréal] " + label + " : " + data.get("name");
       var body = [
         "Nom : " + data.get("name"),
-        "Organisation : " + (data.get("org") || "—"),
+        "Organisation : " + (data.get("org") || "non précisée"),
         "E-mail : " + data.get("email"),
-        "Téléphone : " + (data.get("phone") || "—"),
+        "Téléphone : " + (data.get("phone") || "non précisé"),
         "Profil : " + label,
         "",
         data.get("message")
