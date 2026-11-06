@@ -120,7 +120,7 @@
   /* ---------- Simulateur du cercle fondateur ---------- */
   var range = $("#simRange");
   if (range) {
-    var APPORT = 30000, COUT_OPERATION = 100000, PART = 3000;
+    var APPORT = 40000, COUT_OPERATION = 125000, PART = 4000;
     var presets = $$(".sim__presets button");
     var update = function () {
       var v = parseInt(range.value, 10);
