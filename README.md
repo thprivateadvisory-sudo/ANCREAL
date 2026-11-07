@@ -66,5 +66,5 @@ Settings → Pages → *Deploy from a branch* → `main`, dossier `/ (root)`. Ch
 1. Chez le registrar, zone DNS :
    - `www` → enregistrement **CNAME** vers `thprivateadvisory-sudo.github.io.`
    - `@` (domaine nu) → 4 enregistrements **A** : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-2. Dans le dépôt : créer un fichier `CNAME` contenant `www.ancreal.fr`, et mettre `SITE_URL = "https://www.ancreal.fr"` dans `tools/build.py`, puis `python3 tools/build.py`.
+2. Dans le dépôt : le fichier `CNAME` contient `ancreal.fr` et `SITE_URL = "https://ancreal.fr"` dans `tools/build.py` (les deux doivent correspondre), puis `python3 tools/build.py`.
 3. Settings → Pages : vérifier le domaine, puis cocher **Enforce HTTPS** (une fois le certificat émis, jusqu'à 24 h).

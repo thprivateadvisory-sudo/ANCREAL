@@ -20,7 +20,7 @@ Pour ajouter une page guide : créer `src/pages/ma-page.html` avec `type: articl
 
 Le site seul ne suffit pas : Google classe aussi selon la **notoriété** (liens d'autres sites) et la **présence locale**.
 
-1. **Google Search Console** (gratuit, 10 min) : search.google.com/search-console → ajouter la propriété « Domaine » `ancreal.fr` → vérifier par un enregistrement **TXT** chez le registrar → menu *Sitemaps* → soumettre `https://www.ancreal.fr/sitemap.xml`. Puis *Inspection de l'URL* → *Demander l'indexation* pour l'accueil et les 4 guides.
+1. **Google Search Console** (gratuit, 10 min) : search.google.com/search-console → ajouter la propriété « Domaine » `ancreal.fr` → vérifier par un enregistrement **TXT** chez le registrar → menu *Sitemaps* → soumettre `https://ancreal.fr/sitemap.xml`. Puis *Inspection de l'URL* → *Demander l'indexation* pour l'accueil et les 4 guides.
 2. **Bing Webmaster Tools** : importer directement depuis Search Console (2 min). Bing alimente aussi plusieurs assistants IA.
 3. **Fiche Google Business Profile** (business.google.com) : catégorie « Société de gestion immobilière » ou « Organisme de logement social », zone desservie Grand Est (sans afficher d'adresse si pas de local). C'est ce qui fait apparaître Ancréal sur Google Maps et dans les recherches locales.
 4. **Page LinkedIn entreprise** Ancréal + profil de Thomas qui pointe vers le site. Publier chaque étape (première visite, compromis, chantier, arrivée des locataires).
