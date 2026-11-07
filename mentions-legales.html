@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mentions légales · Ancréal</title>
   <meta name="description" content="Mentions légales, politique de confidentialité et crédits du site Ancréal.">
-  <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://thprivateadvisory-sudo.github.io/ANCREAL/mentions-legales.html">
+  <meta name="robots" content="noindex, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Ancréal">
+  <link rel="canonical" href="https://ancreal.fr/mentions-legales.html">
   <meta name="theme-color" content="#1B3A5B">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -18,11 +19,15 @@
   <meta property="og:site_name" content="Ancréal">
   <meta property="og:title" content="Mentions légales · Ancréal">
   <meta property="og:description" content="Mentions légales, politique de confidentialité et crédits du site Ancréal.">
-  <meta property="og:url" content="https://thprivateadvisory-sudo.github.io/ANCREAL/mentions-legales.html">
-  <meta property="og:image" content="https://thprivateadvisory-sudo.github.io/ANCREAL/assets/img/og-ancreal.jpg">
+  <meta property="og:url" content="https://ancreal.fr/mentions-legales.html">
+  <meta property="og:image" content="https://ancreal.fr/assets/img/og-ancreal.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ancréal, logement social et solidaire dans le Grand Est">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mentions légales · Ancréal">
+  <meta name="twitter:description" content="Mentions légales, politique de confidentialité et crédits du site Ancréal.">
+  <meta name="twitter:image" content="https://ancreal.fr/assets/img/og-ancreal.jpg">
 
   <link rel="preload" href="assets/fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,19 +35,109 @@
   <script>document.documentElement.classList.replace("no-js", "js");</script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ancréal",
-    "url": "https://thprivateadvisory-sudo.github.io/ANCREAL",
-    "logo": "https://thprivateadvisory-sudo.github.io/ANCREAL/assets/img/logo-ancreal.png",
-    "slogan": "Un toit, une seconde chance.",
-    "description": "Entreprise de l'Économie Sociale et Solidaire dédiée au logement solidaire : acquisition, réhabilitation et location de logements conventionnés pour des personnes en réinsertion.",
-    "founder": { "@type": "Person", "name": "Thomas Hoenig" },
-    "areaServed": "Grand Est, France",
-    "email": "contact@groupecohesif.com",
-    "telephone": "+33651951160"
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ancreal.fr/#organisation",
+      "name": "Ancréal",
+      "alternateName": [
+        "Ancreal",
+        "ANCRÉAL"
+      ],
+      "url": "https://ancreal.fr/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ancreal.fr/assets/img/logo-ancreal.png"
+      },
+      "image": "https://ancreal.fr/assets/img/og-ancreal.jpg",
+      "slogan": "Un toit, une seconde chance.",
+      "description": "Société immobilière de l'Économie Sociale et Solidaire (ESS) dédiée au logement social et solidaire : acquisition, réhabilitation et location de logements conventionnés pour des personnes en réinsertion, dans le Grand Est.",
+      "founder": {
+        "@type": "Person",
+        "name": "Thomas Hoenig",
+        "jobTitle": "Président"
+      },
+      "foundingDate": "2026",
+      "email": "contact@groupecohesif.com",
+      "telephone": "+33651951160",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Grand Est",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Grand Est"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Alsace"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lorraine"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Champagne-Ardenne"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        }
+      ],
+      "knowsAbout": [
+        "Logement social",
+        "Logement solidaire",
+        "Logement conventionné",
+        "Logement d'insertion",
+        "Conventionnement Anah",
+        "Loc'Avantages",
+        "Intermédiation locative",
+        "Réhabilitation de logements vacants",
+        "Économie sociale et solidaire",
+        "Investissement solidaire"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "partenariats",
+        "email": "contact@groupecohesif.com",
+        "telephone": "+33651951160",
+        "areaServed": "FR",
+        "availableLanguage": "French"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ancreal.fr/#site",
+      "url": "https://ancreal.fr/",
+      "name": "Ancréal",
+      "description": "Logement social et solidaire dans le Grand Est",
+      "inLanguage": "fr-FR",
+      "publisher": {
+        "@id": "https://ancreal.fr/#organisation"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://ancreal.fr/mentions-legales.html#page",
+      "url": "https://ancreal.fr/mentions-legales.html",
+      "name": "Mentions légales · Ancréal",
+      "description": "Mentions légales, politique de confidentialité et crédits du site Ancréal.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {
+        "@id": "https://ancreal.fr/#site"
+      },
+      "about": {
+        "@id": "https://ancreal.fr/#organisation"
+      },
+      "primaryImageOfPage": "https://ancreal.fr/assets/img/og-ancreal.jpg"
+    }
+  ]
+}
   </script>
 </head>
 <body class="">
@@ -130,7 +225,7 @@
     <div class="footer__grid">
       <div>
         <a href="index.html" class="brand"><span class="brand__mark" aria-hidden="true"></span><span class="brand__name">ANCRÉAL</span></a>
-        <p>Un toit, une seconde chance.<br>Le logement solidaire, porté par un modèle économique durable.</p>
+        <p>Un toit, une seconde chance.<br>Le logement social et solidaire dans le Grand Est, porté par un modèle économique durable.</p>
         <span class="footer__ess">Entreprise de l'Économie Sociale et Solidaire</span>
       </div>
       <div>
@@ -140,6 +235,8 @@
           <li><a href="engagements.html">Nos engagements ESS</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="a-propos.html#feuille-de-route">Feuille de route</a></li>
+          <li><a href="logement-social.html">Guide du logement social</a></li>
+          <li><a href="logement-solidaire-grand-est.html">Logement solidaire Grand Est</a></li>
         </ul>
       </div>
       <div>
@@ -149,7 +246,8 @@
           <li><a href="partenaires.html#associations">Associations</a></li>
           <li><a href="partenaires.html#collectivites">Collectivités</a></li>
           <li><a href="partenaires.html#proprietaires">Propriétaires</a></li>
-          <li><a href="partenaires.html#investisseurs">Investisseurs solidaires</a></li>
+          <li><a href="agences-immobilieres.html">Agents immobiliers</a></li>
+          <li><a href="investir-logement-solidaire.html">Investir dans le logement solidaire</a></li>
         </ul>
       </div>
       <div>
