@@ -11,6 +11,10 @@ Site statique multi-pages (HTML / CSS / JS, sans framework) pour le lancement d'
 | `partenaires.html` | Cercle des entreprises fondatrices + simulateur, entreprises, associations, collectivités, propriétaires, investisseurs |
 | `a-propos.html` | Vision, fondateur, Groupe Cohesif, feuille de route, espace presse |
 | `contact.html` | Formulaire de contact + FAQ |
+| `logement-social.html` | Guide du logement social (page pilier SEO) |
+| `agences-immobilieres.html` | Page dédiée aux agents immobiliers |
+| `logement-solidaire-grand-est.html` | Page territoire Grand Est |
+| `investir-logement-solidaire.html` | Investir dans le logement solidaire |
 | `mentions-legales.html`, `404.html` | Pages légales et d'erreur |
 
 ## Modifier le site
@@ -52,7 +56,7 @@ Le formulaire de contact et l'inscription aux nouvelles ouvrent par défaut la m
 ## Technique
 - Animations : GSAP + ScrollTrigger + SplitText, défilement fluide Lenis (hébergés dans `assets/vendor/`).
 - Polices auto-hébergées (Archivo, Public Sans, Montserrat — licence SIL OFL) : aucun appel à Google Fonts.
-- SEO : balises canoniques, Open Graph, données structurées, `sitemap.xml`, `robots.txt`, manifeste.
+- SEO : balises canoniques, Open Graph, données structurées générées (Organization, fil d'Ariane, Article, FAQ), `sitemap.xml`, `robots.txt`. Plan d'action complet : `SEO.md`.
 - Accessibilité : navigation clavier, `prefers-reduced-motion` respecté, contenu lisible sans JavaScript.
 
 ## Mise en ligne (GitHub Pages)

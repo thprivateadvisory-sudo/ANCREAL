@@ -6,14 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
-  <meta name="robots" content="{{robots}}">
+  <meta name="robots" content="{{robots}}, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Ancréal">
   <link rel="canonical" href="{{canonical}}">
   <meta name="theme-color" content="#1B3A5B">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{og_type}}">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Ancréal">
   <meta property="og:title" content="{{title}}">
@@ -22,7 +23,11 @@
   <meta property="og:image" content="{{og_image}}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ancréal, logement social et solidaire dans le Grand Est">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:image" content="{{og_image}}">
 
   <link rel="preload" href="assets/fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -30,19 +35,7 @@
   <script>document.documentElement.classList.replace("no-js", "js");</script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Ancréal",
-    "url": "{{site_url}}",
-    "logo": "{{site_url}}/assets/img/logo-ancreal.png",
-    "slogan": "Un toit, une seconde chance.",
-    "description": "Entreprise de l'Économie Sociale et Solidaire dédiée au logement solidaire : acquisition, réhabilitation et location de logements conventionnés pour des personnes en réinsertion.",
-    "founder": { "@type": "Person", "name": "Thomas Hoenig" },
-    "areaServed": "Grand Est, France",
-    "email": "contact@groupecohesif.com",
-    "telephone": "+33651951160"
-  }
+{{jsonld}}
   </script>
 </head>
 <body class="{{body_class}}">

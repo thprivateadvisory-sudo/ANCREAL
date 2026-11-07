@@ -346,6 +346,30 @@ em { font-style: normal; }
 
 .figure__num, .kpi__num, .op__row strong, .split__stamp strong { font-variant-numeric: tabular-nums lining-nums; }
 
+/* ---------- Guides (pages de contenu) ---------- */
+.guide { padding: clamp(60px, 8vw, 110px) 0; }
+.guide .container { max-width: 860px; }
+.guide h2 { font-size: clamp(28px, 3vw, 38px); font-weight: 800; letter-spacing: -.02em; margin: 64px 0 18px; }
+.guide h2:first-child { margin-top: 0; }
+.guide h3 { font-size: 21px; margin: 34px 0 10px; }
+.guide p, .guide li { font-size: 18px; line-height: 1.7; }
+.guide ul, .guide ol { padding-left: 1.2em; margin: 0 0 22px; }
+.guide li { margin-bottom: 8px; }
+.guide a:not(.btn) { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
+.guide .summary { background: var(--stone); border-left: 4px solid var(--gres); padding: 26px 30px; margin-bottom: 48px; }
+.guide .summary p { margin: 0; }
+.guide .note { background: var(--gres-light); padding: 20px 24px; margin: 28px 0; font-size: 16px; }
+.guide .note p { font-size: 16px; margin: 0; }
+.guide .compare-wrap { margin: 26px 0 34px; }
+.guide .compare td:first-child { width: 30%; }
+.guide__cta { margin-top: 56px; padding: 36px; background: var(--brand); color: #fff; }
+.guide__cta h2 { color: #fff; margin: 0 0 12px; font-size: clamp(24px, 2.6vw, 32px); }
+.guide__cta p { color: #d3dbe4; }
+.guide__cta .btn { margin-top: 10px; }
+.guide__related { margin-top: 48px; border-top: 1px solid var(--line); padding-top: 28px; }
+.guide__related ul { list-style: none; padding: 0; }
+.guide .faq summary { font-size: 18px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) {
   .nav__links { gap: 20px; }
