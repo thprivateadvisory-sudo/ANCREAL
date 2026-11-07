@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ancreal.fr/sitemap.xml
+Sitemap: https://ancreal.fr/sitemap.xml

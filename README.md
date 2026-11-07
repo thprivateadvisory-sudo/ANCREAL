@@ -31,7 +31,7 @@ tools/build.py        génération des pages + sitemap.xml + robots.txt
 python3 tools/build.py
 ```
 
-**Adresse du site** : `SITE_URL` dans `tools/build.py` vaut `https://www.ancreal.fr` (domaine personnalisé sur GitHub Pages, fichier `CNAME`).
+**Adresse du site** : `SITE_URL` dans `tools/build.py` vaut `https://ancreal.fr` (domaine personnalisé sur GitHub Pages, fichier `CNAME`).
 
 ## Aperçu local
 ```

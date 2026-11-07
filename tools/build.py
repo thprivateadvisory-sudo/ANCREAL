@@ -36,7 +36,7 @@ SRC = ROOT / "src"
 
 # URL publique du site, utilisée pour les liens canoniques, Open Graph et le sitemap.
 # Domaine personnalisé servi par GitHub Pages (voir le fichier CNAME et le README).
-SITE_URL = "https://www.ancreal.fr"
+SITE_URL = "https://ancreal.fr"
 
 NAV = [
     ("modele", "modele.html", "Notre modèle"),
