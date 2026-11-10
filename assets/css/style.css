@@ -585,6 +585,32 @@ html.lenis, html.lenis body { height: auto; }
   .manifesto__text .word { opacity: 1; }
 }
 
+/* ---------- Nos terres ---------- */
+:root { --land: #2e5a3c; --land-dark: #22442d; }
+.page-hero--land .page-hero__media { background-position: right center; }
+.page-hero--land::before { background: linear-gradient(90deg, rgba(10,22,14,.92) 0%, rgba(10,22,14,.8) 38%, rgba(10,22,14,.2) 62%, rgba(10,22,14,0) 100%); }
+.page-hero--land h1 { max-width: 600px; font-size: clamp(44px, 5.6vw, 80px); }
+.page-hero--land p { max-width: 520px; }
+.photo--land { aspect-ratio: 4 / 3; }
+.split__stamp--green { background: var(--land); }
+.split__stamp--green strong { font-size: 32px; }
+.registry td:first-child { width: 8%; font-size: 22px; }
+.registry__next td { color: var(--muted); font-style: italic; }
+.registry__next td:first-child { color: var(--muted); }
+.cta-band--land { background: var(--land); }
+.cta-band--land p { color: #dcebe0; }
+.land-teaser { position: relative; overflow: hidden; color: #fff; background: var(--land-dark); min-height: 82vh; display: flex; align-items: flex-end; }
+.land-teaser__bg { position: absolute; inset: 0; background-size: cover; background-position: right center; }
+.land-teaser::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(10,22,14,.92) 0%, rgba(10,22,14,.8) 40%, rgba(10,22,14,.15) 65%, rgba(10,22,14,0) 100%); }
+.land-teaser .title, .land-teaser .lead { max-width: 600px; }
+@media (max-width: 960px) {
+  .page-hero--land::before, .land-teaser::before { background: linear-gradient(0deg, rgba(10,22,14,.94) 0%, rgba(10,22,14,.75) 55%, rgba(10,22,14,.35) 100%); }
+}
+.land-teaser .container { position: relative; z-index: 2; }
+.land-teaser .eyebrow { color: #fff; opacity: .75; }
+.land-teaser .title { color: #fff; font-size: clamp(38px, 4.6vw, 68px); font-weight: 800; letter-spacing: -.035em; line-height: 1; }
+.land-teaser .lead { color: #e1e8e3; }
+
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .docs--4 { grid-template-columns: repeat(4, 1fr); }
 @media (max-width: 1080px) { .docs--4 { grid-template-columns: 1fr 1fr; } }

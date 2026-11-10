@@ -33,6 +33,7 @@ SITE_URL = "https://www.ancreal.fr"
 
 NAV = [
     ("modele", "modele.html", "Notre modèle"),
+    ("terres", "terres.html", "Nos terres"),
     ("engagements", "engagements.html", "Engagements"),
     ("partenaires", "partenaires.html", "Nous rejoindre"),
     ("a-propos", "a-propos.html", "À propos"),

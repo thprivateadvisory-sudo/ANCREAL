@@ -61,5 +61,9 @@
   "meeting": {
     "src": "assets/img/photos/meeting.webp",
     "alt": "Réunion de travail"
+  },
+  "terrain": {
+    "src": "assets/img/photos/terrain.webp",
+    "alt": "Prairie bordée de bois derrière une clôture portant la bâche Ancréal"
   }
 }
