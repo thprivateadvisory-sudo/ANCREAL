@@ -83,7 +83,8 @@ em { font-style: normal; }
   font-family: var(--font-head); font-weight: 600; font-size: 15px; letter-spacing: .01em;
   transition: background .25s, color .25s, border-color .25s; white-space: nowrap;
 }
-.btn svg { width: 18px; height: 18px; transition: transform .3s var(--ease); }
+@media (max-width: 400px) { .btn { white-space: normal; text-align: center; max-width: 100%; } }
+.btn svg { flex-shrink: 0; width: 18px; height: 18px; transition: transform .3s var(--ease); }
 .btn:hover svg { transform: translateX(4px); }
 .btn--gold { background: var(--gres); color: #fff; }
 .btn--gold:hover { background: var(--gres-dark); }
@@ -417,6 +418,7 @@ em { font-style: normal; }
   .chain { grid-template-columns: 1fr; }
   .chain__item:not(:first-of-type) { border-left: 0; border-top: 1px solid var(--line); }
   .op__row strong { font-size: 22px; }
+  .op__row { flex-wrap: wrap; gap: 4px 20px; }
   .photo--small { display: none; }
   .loop-note { flex-direction: column; align-items: flex-start; }
   .tab { padding: 14px 12px; font-size: 14px; }
@@ -571,10 +573,11 @@ html.lenis, html.lenis body { height: auto; }
 
 /* Bloc document (presse / dossier) */
 .docs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.doc { display: flex; flex-direction: column; gap: 14px; padding: 32px; border: 1px solid var(--line); background: #fff; transition: border-color .25s; }
+.doc { display: flex; flex-direction: column; gap: 14px; min-width: 0; overflow-wrap: anywhere; padding: 32px; border: 1px solid var(--line); background: #fff; transition: border-color .25s; }
 .doc:hover { border-color: var(--ink); }
 .doc__type { font-family: var(--font-head); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gres); }
 .doc h4 { font-size: 21px; margin: 0; }
+@media (max-width: 400px) { .doc { padding: 24px; } .doc h4 { font-size: 19px; } }
 .doc p { font-size: 15px; margin: 0; color: var(--muted); flex: 1; }
 .doc__cta { font-family: var(--font-head); font-weight: 600; display: inline-flex; gap: 8px; align-items: center; }
 .doc__cta svg { width: 18px; height: 18px; }
