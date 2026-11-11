@@ -95,7 +95,6 @@ ORGANIZATION = {
     "founder": {"@type": "Person", "name": "Thomas Hoenig", "jobTitle": "Président"},
     "foundingDate": "2026",
     "email": "contact@groupecohesif.com",
-    "telephone": "+33651951160",
     "address": {"@type": "PostalAddress", "addressRegion": "Grand Est", "addressCountry": "FR"},
     "areaServed": [
         {"@type": "AdministrativeArea", "name": "Grand Est"},
@@ -114,7 +113,6 @@ ORGANIZATION = {
         "@type": "ContactPoint",
         "contactType": "partenariats",
         "email": "contact@groupecohesif.com",
-        "telephone": "+33651951160",
         "areaServed": "FR",
         "availableLanguage": "French",
     },
