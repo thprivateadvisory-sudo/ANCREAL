@@ -68,3 +68,8 @@ Settings → Pages → *Deploy from a branch* → `main`, dossier `/ (root)`. Ch
    - `@` (domaine nu) → 4 enregistrements **A** : `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 2. Dans le dépôt : le fichier `CNAME` contient `ancreal.fr` et `SITE_URL = "https://ancreal.fr"` dans `tools/build.py` (les deux doivent correspondre), puis `python3 tools/build.py`.
 3. Settings → Pages : vérifier le domaine, puis cocher **Enforce HTTPS** (une fois le certificat émis, jusqu'à 24 h).
+
+## Page « arrive bientôt » (pré-ouverture)
+Toutes les pages affichent une page d'attente protégée par mot de passe (`assets/js/gate.js`).
+- Changer le mot de passe : remplacer `HASH` par le résultat de `printf %s 'nouveau' | sha256sum`.
+- Lancer officiellement le site : passer `ENABLED` à `false` dans `assets/js/gate.js`.
