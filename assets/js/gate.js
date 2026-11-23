@@ -15,16 +15,15 @@
 (function () {
   var CONFIG = {
     ENABLED: true,
-    HASH: "43266a29e4419f0b394e3ecdc84dcdbe477d6b4729c4c7f3e5ff12e8ab4cd5fe",
-    KEY: "ancreal-gate",
+    HASH: "eb6d5d7048fb4d0b6fc263e1d69ff680fae7b9a30fb774515f765ee804147154",
+    KEY: "ancreal-gate-v2",
     name: "Ancréal",
-    logo: "assets/img/logo-mark-white.svg",
-    eyebrow: "Entreprise de l'Économie Sociale et Solidaire · Grand Est",
+    logo: '<svg viewBox="320 318 510 450" aria-hidden="true"><polygon points="330,757 648,328 716,418 464,757"/><polygon points="612,590 681,632 681,757 612,757"/><polygon points="705,483 820,573 820,757 705,757"/></svg><span class="g-word">ANCRÉAL</span>',
     tagline: "Un toit, une seconde chance.",
-    text: "Nous préparons le lancement officiel de notre site. Logement solidaire, réhabilitation et réinsertion : rendez-vous très bientôt.",
+    text: "Entreprise de l'Économie Sociale et Solidaire, Ancréal acquiert, rénove et loue des logements pour les personnes en réinsertion dans le Grand Est. Notre site ouvre très prochainement.",
     contact: "contact@groupecohesif.com",
-    colors: { bg: "#10263d", bg2: "#1b3a5b", accent: "#a8432d", accentHover: "#8c3523", text: "#c5d1de" },
-    fonts: { head: '"Archivo", "Helvetica Neue", Arial, sans-serif', body: '"Public Sans", "Helvetica Neue", Arial, sans-serif' },
+    colors: { bg: "#f2efe9", ink: "#15191e", text: "#3b424a", muted: "#6a727b", line: "#d8d3cb", brand: "#1b3a5b", brandDark: "#10263d", accent: "#a8432d", error: "#a8432d" },
+    fonts: { head: '"Archivo", "Helvetica Neue", Arial, sans-serif', headWeight: 800, body: '"Public Sans", "Helvetica Neue", Arial, sans-serif', brand: '"Montserrat", "Helvetica Neue", Arial, sans-serif' },
     radius: "2px"
   };
 
@@ -67,44 +66,42 @@
   }
 
   /* --- Masquage immédiat du site (avant tout affichage) --- */
-  var c = CONFIG.colors;
+  var c = CONFIG.colors, f = CONFIG.fonts;
   var css =
     "html.site-gated{background:" + c.bg + "}" +
     "html.site-gated body{overflow:hidden!important}" +
     "html.site-gated body>*:not(#site-gate){visibility:hidden!important}" +
-    "#site-gate{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;padding:32px 16px;overflow-y:auto;" +
-      "background:radial-gradient(120% 80% at 50% 0%," + c.bg2 + " 0%," + c.bg + " 60%);color:" + c.text + ";font-family:" + CONFIG.fonts.body + ";" +
-      "-webkit-font-smoothing:antialiased;transition:opacity .6s ease,visibility .6s ease}" +
+    "#site-gate{position:fixed;inset:0;z-index:2147483000;overflow-y:auto;background:" + c.bg + ";color:" + c.text + ";font-family:" + f.body + ";" +
+      "-webkit-font-smoothing:antialiased;transition:opacity .5s ease,visibility .5s ease}" +
     "#site-gate.is-open{opacity:0;visibility:hidden}" +
-    "#site-gate::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.07;" +
-      "background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:64px 64px;" +
-      "-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent)}" +
-    "#site-gate .g-card{position:relative;width:100%;max-width:560px;margin:auto;text-align:center;animation:gIn .9s cubic-bezier(.2,.7,.2,1) both}" +
-    "@keyframes gIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}" +
-    "#site-gate .g-logo{height:64px;width:auto;margin:0 auto 28px;display:block}" +
-    "#site-gate .g-eyebrow{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.75;margin:0 0 20px}" +
-    "#site-gate .g-title{font-family:" + CONFIG.fonts.head + ";font-weight:800;color:#fff;font-size:clamp(34px,7vw,58px);line-height:1.05;letter-spacing:-.02em;margin:0 0 14px}" +
-    "#site-gate .g-title span{color:" + c.accent + ";filter:brightness(1.35)}" +
-    "#site-gate .g-tag{font-family:" + CONFIG.fonts.head + ";font-weight:600;color:#fff;font-size:clamp(17px,2.6vw,20px);margin:0 0 14px}" +
-    "#site-gate .g-text{font-size:16px;line-height:1.65;margin:0 auto 32px;max-width:460px}" +
-    "#site-gate .g-bar{width:56px;height:3px;background:" + c.accent + ";margin:0 auto 32px;border:0}" +
-    "#site-gate form{display:flex;gap:8px;max-width:420px;margin:0 auto}" +
-    "#site-gate label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}" +
-    "#site-gate input{flex:1;min-width:0;height:52px;padding:0 18px;font:inherit;font-size:16px;color:#fff;background:rgba(255,255,255,.08);" +
-      "border:1px solid rgba(255,255,255,.22);border-radius:" + CONFIG.radius + ";outline:none;transition:border-color .2s,background .2s}" +
-    "#site-gate input::placeholder{color:rgba(255,255,255,.55)}" +
-    "#site-gate input:focus{border-color:#fff;background:rgba(255,255,255,.12)}" +
-    "#site-gate button{height:52px;padding:0 26px;font:inherit;font-weight:600;font-size:15px;color:#fff;background:" + c.accent + ";border:0;" +
-      "border-radius:" + CONFIG.radius + ";cursor:pointer;transition:background .2s,transform .2s}" +
-    "#site-gate button:hover{background:" + c.accentHover + "}" +
-    "#site-gate button:focus-visible,#site-gate input:focus-visible{outline:3px solid #fff;outline-offset:2px}" +
-    "#site-gate .g-error{min-height:22px;margin:12px 0 0;font-size:14px;color:#ffb4a3}" +
-    "#site-gate.shake form{animation:gShake .4s}" +
-    "@keyframes gShake{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}" +
-    "#site-gate .g-foot{margin:36px 0 0;font-size:13px;opacity:.7}" +
-    "#site-gate .g-foot a{color:#fff;text-decoration:underline;text-underline-offset:3px}" +
-    "@media (max-width:480px){#site-gate form{flex-direction:column}#site-gate input{flex:none;width:100%}#site-gate button{width:100%}#site-gate .g-logo{height:52px}}" +
-    "@media (prefers-reduced-motion:reduce){#site-gate,#site-gate .g-card{animation:none;transition:none}}";
+    "#site-gate .g-wrap{min-height:100%;max-width:1200px;margin:0 auto;padding:0 clamp(16px,5vw,64px);display:flex;flex-direction:column}" +
+    "#site-gate .g-top,#site-gate .g-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}" +
+    "#site-gate .g-top{padding:28px 0}" +
+    "#site-gate .g-logo{display:flex;align-items:center;gap:12px;color:" + c.ink + "}" +
+    "#site-gate .g-logo svg{height:34px;width:auto;fill:" + c.brand + "}" +
+    "#site-gate .g-logo img{height:52px;width:auto}" +
+    "#site-gate .g-word{font-family:" + f.brand + ";font-weight:500;font-size:19px;letter-spacing:.22em;color:" + c.brand + "}" +
+    "#site-gate .g-status{font-size:14px;color:" + c.muted + "}" +
+    "#site-gate .g-main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:48px 0 64px;max-width:680px}" +
+    "#site-gate .g-title{font-family:" + f.head + ";font-weight:" + f.headWeight + ";color:" + c.ink + ";font-size:clamp(38px,6.5vw,68px);line-height:1.04;letter-spacing:-.025em;margin:0 0 24px}" +
+    "#site-gate .g-tag{font-family:" + f.head + ";font-weight:600;color:" + c.brand + ";font-size:clamp(18px,2.4vw,21px);margin:0 0 12px}" +
+    "#site-gate .g-text{font-size:17px;line-height:1.65;margin:0 0 44px;max-width:560px}" +
+    "#site-gate .g-label{display:block;font-size:14px;font-weight:600;color:" + c.ink + ";margin:0 0 10px}" +
+    "#site-gate form{display:flex;gap:8px;max-width:440px}" +
+    "#site-gate input{flex:1;min-width:0;height:50px;padding:0 16px;font:inherit;font-size:16px;color:" + c.ink + ";background:#fff;" +
+      "border:1px solid " + c.line + ";border-radius:" + CONFIG.radius + ";outline:none;transition:border-color .2s}" +
+    "#site-gate input:focus{border-color:" + c.brand + "}" +
+    "#site-gate button{height:50px;padding:0 26px;font:inherit;font-weight:600;font-size:15px;color:#fff;background:" + c.brand + ";border:0;" +
+      "border-radius:" + CONFIG.radius + ";cursor:pointer;transition:background .2s}" +
+    "#site-gate button:hover{background:" + c.brandDark + "}" +
+    "#site-gate button:focus-visible,#site-gate input:focus-visible{outline:2px solid " + c.accent + ";outline-offset:2px}" +
+    "#site-gate .g-error{min-height:22px;margin:10px 0 0;font-size:14px;color:" + c.error + "}" +
+    "#site-gate .g-bottom{border-top:1px solid " + c.line + ";padding:22px 0 28px;font-size:14px;color:" + c.muted + "}" +
+    "#site-gate .g-bottom a{color:" + c.ink + ";text-decoration:none;border-bottom:1px solid " + c.line + "}" +
+    "#site-gate .g-bottom a:hover{border-color:" + c.ink + "}" +
+    "@media (max-width:520px){#site-gate form{flex-direction:column}#site-gate input{flex:none;width:100%}#site-gate button{width:100%}" +
+      "#site-gate .g-logo img{height:44px}#site-gate .g-main{padding:32px 0 48px}}" +
+    "@media (prefers-reduced-motion:reduce){#site-gate{transition:none}}";
 
   root.classList.add("site-gated");
   var style = document.createElement("style");
@@ -121,26 +118,26 @@
     gate.setAttribute("aria-modal", "true");
     gate.setAttribute("aria-labelledby", "site-gate-title");
     gate.innerHTML =
-      '<div class="g-card">' +
-        '<img class="g-logo" src="' + esc(CONFIG.logo) + '" alt="' + esc(CONFIG.name) + '">' +
-        '<p class="g-eyebrow">' + esc(CONFIG.eyebrow) + "</p>" +
-        '<h1 class="g-title" id="site-gate-title">' + esc(CONFIG.name) + " <span>arrive bientôt</span></h1>" +
-        '<p class="g-tag">' + esc(CONFIG.tagline) + "</p>" +
-        '<p class="g-text">' + esc(CONFIG.text) + "</p>" +
-        '<hr class="g-bar">' +
-        '<form novalidate>' +
-          '<label for="site-gate-pw">Mot de passe</label>' +
-          '<input id="site-gate-pw" type="password" autocomplete="current-password" placeholder="Mot de passe d\'accès" required>' +
-          '<button type="submit">Entrer</button>' +
-        "</form>" +
-        '<p class="g-error" role="alert" aria-live="polite"></p>' +
-        '<p class="g-foot">Accès réservé aux partenaires pendant la pré-ouverture' +
-          (CONFIG.contact ? ' · <a href="mailto:' + esc(CONFIG.contact) + '">' + esc(CONFIG.contact) + "</a>" : "") + "</p>" +
+      '<div class="g-wrap">' +
+        '<header class="g-top"><div class="g-logo">' + CONFIG.logo + '</div><span class="g-status">Site en pré-ouverture</span></header>' +
+        '<main class="g-main">' +
+          '<h1 class="g-title" id="site-gate-title">' + esc(CONFIG.name) + " arrive bientôt.</h1>" +
+          '<p class="g-tag">' + esc(CONFIG.tagline) + "</p>" +
+          '<p class="g-text">' + esc(CONFIG.text) + "</p>" +
+          '<label class="g-label" for="site-gate-pw">Accès réservé</label>' +
+          '<form novalidate>' +
+            '<input id="site-gate-pw" type="password" autocomplete="current-password" placeholder="Mot de passe" required>' +
+            '<button type="submit">Entrer</button>' +
+          "</form>" +
+          '<p class="g-error" role="alert" aria-live="polite"></p>' +
+        "</main>" +
+        '<footer class="g-bottom"><span>' +
+          (CONFIG.contact ? 'Une question : <a href="mailto:' + esc(CONFIG.contact) + '">' + esc(CONFIG.contact) + "</a>" : "") +
+          "</span><span>© " + new Date().getFullYear() + " " + esc(CONFIG.name) + "</span></footer>" +
       "</div>";
     document.body.appendChild(gate);
 
     var form = gate.querySelector("form"), input = gate.querySelector("input"), error = gate.querySelector(".g-error");
-    input.focus();
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (sha256(input.value.trim()) === CONFIG.HASH) {
@@ -148,10 +145,9 @@
         try { sessionStorage.setItem(CONFIG.KEY, CONFIG.HASH); } catch (err) {}
         root.classList.remove("site-gated");
         gate.classList.add("is-open");
-        setTimeout(function () { gate.remove(); style.remove(); }, 700);
+        setTimeout(function () { gate.remove(); style.remove(); }, 600);
       } else {
         error.textContent = "Mot de passe incorrect.";
-        gate.classList.remove("shake"); void gate.offsetWidth; gate.classList.add("shake");
         input.select();
       }
     });
